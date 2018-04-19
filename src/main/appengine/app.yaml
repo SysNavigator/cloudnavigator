@@ -20,7 +20,7 @@ env: flex
 
 runtime_config:  
   jdk: openjdk8
-  server: tomcat8 # Run on Tomcat8
+  server: jetty9
 
 manual_scaling:
   instances: 1

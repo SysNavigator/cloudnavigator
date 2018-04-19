@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 	<title>Welcome</title>
@@ -8,6 +9,7 @@
 </head>
 <body>
 	<div class="container">
+		<p>Welcome <c:out value="${user}" /></p>
 		<table class="table table-striped">
 			<caption>Your todos are</caption>
 			<thead>

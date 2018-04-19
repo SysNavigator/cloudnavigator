@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
+@RequestMapping("/pbms")
 public class WelcomeController {
 
 	@RequestMapping("/_ah/health")
@@ -16,7 +17,7 @@ public class WelcomeController {
 		return "Still surviving.";
 	}
 
-	@RequestMapping("/")
+	@RequestMapping("/rechnung")
 	public String loginMessage(HttpServletRequest request) {
 		String email = request.getHeader("X-Goog-Authenticated-User-Email");
 		if (email == null) {
@@ -24,6 +25,6 @@ public class WelcomeController {
 			return "dev-login";
 		}
 		request.setAttribute("user", email);
-		return "welcome";
+		return "pbms/rechnung";
 	}
 }

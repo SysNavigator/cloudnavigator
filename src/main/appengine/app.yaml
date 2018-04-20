@@ -29,4 +29,6 @@ handlers:
 - url: /.*
   script: this field is required, but ignored
 # [END runtime]
- 
+
+env_variables:
+  spring_profiles_active: appengine

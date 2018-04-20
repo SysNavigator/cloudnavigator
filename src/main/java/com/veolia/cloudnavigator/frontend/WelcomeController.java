@@ -24,10 +24,6 @@ public class WelcomeController {
 	public String loginMessage(HttpServletRequest request) {
 		jdbcTemplate.execute("show tables");
 		String email = request.getHeader("X-Goog-Authenticated-User-Email");
-		if (email == null) {
-			// should not happen on app-engine because of IAP proxy
-			return "dev-login";
-		}
 		request.setAttribute("user", email);
 		return "welcome";
 	}
